@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/jwu/jwu/LeetCode/DynamicProgrammingSolution.cpp
+algorithm
+-
+DynamicProgrammingSolution.h
+/Users/jwu/jwu/LeetCode/DynamicProgrammingSolution.h
+
+/Users/jwu/jwu/LeetCode/DynamicProgrammingSolution.h
+vector
+-
+
