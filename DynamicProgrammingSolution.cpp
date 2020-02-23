@@ -25,7 +25,7 @@ int DynamicProgrammingSolution::maxProduct(vector<int> &nums) {
     return 0;
 }
 
-int DynamicProgrammingSolution::minPathSum(vector<vector<int> > &grid) {
+int DynamicProgrammingSolution::minPathSum(vector<vector<int>> &grid) {
     if (grid.empty()) return 0;
 
     for (int i = 1; i < grid[0].size(); ++i) {
@@ -70,6 +70,26 @@ int DynamicProgrammingSolution::minimumTotal(vector<vector<int>>& triangle)
     return triangle.front().front();
 }
 
-int DynamicProgrammingSolution::findLongestChain(vector<vector<int> > &pairs) {
+int DynamicProgrammingSolution::findLongestChain(vector<vector<int>> &pairs) {
+    // Greedy implement
+
+    sort(
+            pairs.begin(),
+            pairs.end(),
+            [](const vector<int>& v1, const vector<int>& v2) -> bool {return v1[1] < v2[1];});
+
+    int ans = 0, cur = INT_MIN;
+
+    for (const auto& pair : pairs) {
+        if (cur < pair[0]) {
+            cur = pair[1];
+            ans++;
+        }
+    }
+
+    return ans;
+}
+
+vector<vector<int>> DynamicProgrammingSolution::findSubsequences(vector<int> &nums) {
 
 }

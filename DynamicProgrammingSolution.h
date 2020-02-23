@@ -16,6 +16,7 @@ public:
     int minPathSum(vector<vector<int>>& grid); // LeetCode 64
     int minimumTotal(vector<vector<int>>& triangle); // LeetCode 120;
     int findLongestChain(vector<vector<int>>& pairs); // LeetCode 646;
+    vector<vector<int>> findSubsequences(vector<int>& nums); // LeetCode 491;
 };
 
 
