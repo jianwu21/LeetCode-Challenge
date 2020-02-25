@@ -4,7 +4,6 @@
 
 #include "MathSolution.h"
 #include <algorithm>
-#include <float.h>
 
 #define EPSILON 0.00001
 

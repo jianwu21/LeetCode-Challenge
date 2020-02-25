@@ -2,6 +2,7 @@
 
 #include "DynamicProgrammingSolution.h"
 #include "MathSolution.h"
+#include "FunSolution.h"
 
 
 void RunDynamicProgrammingQuestions()
@@ -39,13 +40,43 @@ void MathTest()
     auto sqrtX = ms.mySqrt(4);
 }
 
+void FunTest()
+{
+    FunSolution fc;
+    vector<vector<char>> map1 = {
+            {'1', '1', '0', '0', '0'},
+            {'1', '1', '0', '0', '0'},
+            {'0', '0', '1', '0', '0'},
+            {'0', '0', '0', '1', '1'}
+    };
+
+    vector<vector<int >> grid = {
+            {1, 1, 0, 0, 0},
+            {1, 1, 0, 0, 0},
+            {0, 0, 1, 0, 0},
+            {0, 0, 0, 1, 1}
+    };
+
+    vector<vector<int >> grid2 = {
+            {0, 1, 0, 0},
+            {1, 1, 1, 0},
+            {0, 1, 0, 0},
+            {1, 1, 0, 0}
+    };
+
+    auto numOfIslands = fc.numIslands(map1);
+    auto maxArea = fc.maxAreaOfIsland(grid);
+    auto numOfStripes = fc.islandPerimeter(grid2);
+}
+
 int main() {
-    std::cout << "Test, Begin!" << std::endl;
+    std::cout << 'Test, Begin!' << std::endl;
 
 //    RunDynamicProgrammingQuestions();
 
-    MathTest();
-    std::cout << "Test, End!" << std::endl;
+//    MathTest();
+    FunTest();
+    std::cout << 'Test, End!' << std::endl;
     return 0;
 }
 
