@@ -3,6 +3,7 @@
 #include "DynamicProgrammingSolution.h"
 #include "MathSolution.h"
 #include "FunSolution.h"
+#include "SortAlgorithm.h"
 
 
 void RunDynamicProgrammingQuestions()
@@ -31,6 +32,12 @@ void RunDynamicProgrammingQuestions()
 
     vector<int> sortedNums = {4, 6, 7, 7};
     auto subSequences = dps.findSubsequences(sortedNums);
+
+    vector<int> bag = {1, 5, 11, 5};
+    auto canPartition = dps.canPartition(bag);
+
+    string s = "0";
+    auto ans = dps.numDecodings(s);
 }
 
 void MathTest()
@@ -69,13 +76,22 @@ void FunTest()
     auto numOfStripes = fc.islandPerimeter(grid2);
 }
 
+void SortTest()
+{
+    SortAlgorithm sa;
+    int a[7] = {3, 4, 1, 98, 32, 54, 6};
+    sa.quickSort(a, 0, 6);
+}
+
 int main() {
     std::cout << 'Test, Begin!' << std::endl;
 
-//    RunDynamicProgrammingQuestions();
+    RunDynamicProgrammingQuestions();
 
 //    MathTest();
-    FunTest();
+//    FunTest();
+
+//    SortTest();
     std::cout << 'Test, End!' << std::endl;
     return 0;
 }

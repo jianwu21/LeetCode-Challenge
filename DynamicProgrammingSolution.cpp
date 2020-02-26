@@ -2,6 +2,7 @@
 // Created by Jian Wu on 22/02/2020.
 //
 #include <algorithm>
+#include <numeric>
 
 #include "DynamicProgrammingSolution.h"
 
@@ -91,5 +92,46 @@ int DynamicProgrammingSolution::findLongestChain(vector<vector<int>> &pairs) {
 }
 
 vector<vector<int>> DynamicProgrammingSolution::findSubsequences(vector<int> &nums) {
+    return vector<vector<int>>(9, vector<int>(9, 0));
+}
 
+bool DynamicProgrammingSolution::canPartition(vector<int>& nums) {
+    int sum = accumulate(nums.begin(), nums.end(), 0);
+
+    if (sum % 2 == 1 || nums.size() == 1) return false;
+    vector<vector<int>> dp(nums.size(), vector<int>(sum/2 + 1, 0));
+
+    dp[0][nums[0]] = 1;
+    dp[0][0] = 1;
+
+    for (int i = 0; i < nums.size(); ++i) {
+        dp[i][0] = 1;
+    }
+
+    for (int i = 1; i < nums.size(); ++i) {
+        for (int j = 0; j < sum/2+1; ++j) {
+            dp[i][j] = dp[i - 1][j] || ((j >= nums[i]) ? dp[i - 1][j - nums[i]] : 0);
+        }
+
+        if (dp[i].back() == 1) return true;
+    }
+
+    return false;
+}
+
+int DynamicProgrammingSolution::numDecodings(string s) {
+    if (s.empty()) return 0;
+    vector<int> ans(s.size() + 1, 0);
+    ans[0] = 1;
+    ans[1] = s[0] == '0' ? 0 : 1;
+
+    for (int i = 2; i < s.size() + 1; ++i) {
+        int index = s[i-1] - '0';
+        ans[i] = ans[i-1] * (index > 0 ? 1 : 0);
+        int doubleChar = index + 10 * (s[i - 2] - '0');
+        if (doubleChar <= 26 && doubleChar >= 10)
+            ans[i] += ans[i-2];
+    }
+
+    return ans.back();
 }

@@ -5,6 +5,7 @@
 #ifndef LEETCODE_DYNAMICPROGRAMMINGSOLUTION_H
 #define LEETCODE_DYNAMICPROGRAMMINGSOLUTION_H
 
+#include <string>
 #include <vector>
 
 using namespace std;
@@ -17,6 +18,8 @@ public:
     int minimumTotal(vector<vector<int>>& triangle); // LeetCode 120;
     int findLongestChain(vector<vector<int>>& pairs); // LeetCode 646;
     vector<vector<int>> findSubsequences(vector<int>& nums); // LeetCode 491;
+    bool canPartition(vector<int>& nums); // LeetCode 416
+    int numDecodings(string s); // LeetCode 91
 };
 
 

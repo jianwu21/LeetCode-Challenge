@@ -5,14 +5,7 @@
 #ifndef LEETCODE_LINKEDLISTSOLUTION_H
 #define LEETCODE_LINKEDLISTSOLUTION_H
 
-struct ListNode
-{
-    int val;
-    ListNode* next;
-
-    ListNode() : next(nullptr)
-    {}
-};
+#include "Common.h"
 
 class LinkedListSolution {
 
