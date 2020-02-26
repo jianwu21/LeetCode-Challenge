@@ -38,6 +38,9 @@ void RunDynamicProgrammingQuestions()
 
     string s = "0";
     auto ans = dps.numDecodings(s);
+
+    vector<int> nums2 = { -2, 0, -1};
+    auto maxProduct = dps.maxProduct(nums2);
 }
 
 void MathTest()

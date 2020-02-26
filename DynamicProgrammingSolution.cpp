@@ -7,7 +7,7 @@
 #include "DynamicProgrammingSolution.h"
 
 
-int DynamicProgrammingSolution::maxSubArray(vector<int> &nums)
+int DynamicProgrammingSolution::maxSubArray(vector<int>& nums)
 {
     vector<int> dp;
     dp.push_back(nums.front());
@@ -22,8 +22,25 @@ int DynamicProgrammingSolution::maxSubArray(vector<int> &nums)
     return *max_element(dp.begin(), dp.end());
 }
 
-int DynamicProgrammingSolution::maxProduct(vector<int> &nums) {
-    return 0;
+int DynamicProgrammingSolution::maxProduct(vector<int>& nums) {
+    if (nums.size() == 1) return nums.front();
+
+    int size = nums.size();
+    vector<int> pos(size, 0), neg(size, 0);
+    pos[0] = nums[0] > 0 ? nums[0] : 0;
+    neg[0] = nums[0] < 0 ? nums[0] : 0;
+
+    for (int i = 1; i < nums.size(); ++i) {
+        if (nums[i] > 0) {
+            pos[i] = pos[i-1] == 0 ? nums[i] : pos[i-1] * nums[i];
+            neg[i] = neg[i-1] * nums[i];
+        } else if (nums[i] < 0) {
+            pos[i] = neg[i-1] * nums[i];
+            neg[i] = pos[i-1] == 0 ? nums[i] : pos[i-1] * nums[i];
+        }
+    }
+
+    return *max_element(pos.begin(), pos.end());
 }
 
 int DynamicProgrammingSolution::minPathSum(vector<vector<int>> &grid) {
@@ -131,6 +148,27 @@ int DynamicProgrammingSolution::numDecodings(string s) {
         int doubleChar = index + 10 * (s[i - 2] - '0');
         if (doubleChar <= 26 && doubleChar >= 10)
             ans[i] += ans[i-2];
+    }
+
+    return ans.back();
+}
+
+vector<TreeNode *> DynamicProgrammingSolution::generateTrees(int n) {
+    if (n == 1) return vector<TreeNode*> {new TreeNode(n)};
+    vector<vector<TreeNode*>> ans(n);
+    ans[0] = {new TreeNode(n)};
+
+    for (int i = 1; i < n; ++i) {
+        for (int j = 0; j < ans[i-1].size(); ++j) {
+            while (i)
+            {
+                TreeNode* cur = new TreeNode(0);
+                cur->right = ans[i-1][j];
+                TreeNode* newTreeNode = new TreeNode(i+1);
+
+                ans[i].push_back(cur->right);
+            }
+        }
     }
 
     return ans.back();
