@@ -41,6 +41,21 @@ void RunDynamicProgrammingQuestions()
 
     vector<int> nums2 = { -2, 0, -1};
     auto maxProduct = dps.maxProduct(nums2);
+
+    auto numSquare = dps.numSquares(12);
+//    auto countPrime = dps.countPrimes(3);
+    auto maxBreakProduct = dps.integerBreak(8);
+
+    vector<int> houses = {2,7,9,3,1};
+    auto maxValue = dps.rob(houses);
+
+    maxValue = dps.robInCircle(houses);
+
+    vector<string> wordDict = {"leet", "code"};
+    auto isWordBreak = dps.wordBreak("leetcode", wordDict);
+
+    nums = {10,9,2,5,3,7,101,18};
+    auto lengthOfLIS = dps.lengthOfLIS(nums);
 }
 
 void MathTest()

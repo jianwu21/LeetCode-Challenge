@@ -7,7 +7,7 @@
 
 #include <iostream>
 
-typedef struct ListNode {
+typedef struct ListNode{
     int val;
     ListNode* next;
 
