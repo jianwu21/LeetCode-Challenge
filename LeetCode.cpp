@@ -54,8 +54,10 @@ void RunDynamicProgrammingQuestions()
     vector<string> wordDict = {"leet", "code"};
     auto isWordBreak = dps.wordBreak("leetcode", wordDict);
 
-    nums = {10,9,2,5,3,7,101,18};
+    nums = {10,9,2,5,3,7,101,18,19,16};
     auto lengthOfLIS = dps.lengthOfLIS(nums);
+
+    auto countBits = dps.countBits(2);
 }
 
 void MathTest()

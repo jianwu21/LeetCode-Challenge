@@ -3,7 +3,7 @@
 //
 #include <algorithm>
 #include <numeric>
-#include <math.h>
+#include <cmath>
 
 #include "DynamicProgrammingSolution.h"
 
@@ -190,16 +190,6 @@ int DynamicProgrammingSolution::numSquares(int n) {
     return ans.back();
 }
 
-inline bool isPrime(const int n) {
-    if (n == 1) return false;
-    if (n == 2) return true;
-    for (int i = 2; i * i <= n; ++i) {
-        if (n % i == 0) return false;
-    }
-
-    return true;
-}
-
 int DynamicProgrammingSolution::countPrimes(int n) {
     if (n <= 1) return 0;
 
@@ -241,20 +231,9 @@ vector<int> DynamicProgrammingSolution::countBits(int num) {
     if (!num) return {0};
 
     vector<int> res(num+1, 0);
-    res[0] = 0, res[1] = 1;
-    int start = 2;
-    while(start * 2 <= num) {
-        for (int i = start; i < 2 * start; ++i) {
-            res[i] = 1 + res[i - start];
-        }
-
-        start <<= 1;
+    for (int i = 1; i <= num; ++i) {
+        res[i] = (i & 1) == 1 ? 1 + res[i-1] : res[i>>1];
     }
-
-    for (int i = start; i < num + 1; ++i) {
-        res[i] = 1 + res[i - start];
-    }
-
     return res;
 }
 
@@ -292,7 +271,7 @@ int DynamicProgrammingSolution::robInCircle(vector<int> &nums) {
     return max(fromFirst.back(), fromSecond.back());
 }
 
-bool DynamicProgrammingSolution::wordBreak(string s, vector<string> &wordDict) {
+bool DynamicProgrammingSolution::wordBreak(const string& s, vector<string>& wordDict) {
     vector<bool> dp(s.size()+1, false);
     dp[0] = true;
 
@@ -313,22 +292,59 @@ bool DynamicProgrammingSolution::wordBreak(string s, vector<string> &wordDict) {
 }
 
 int DynamicProgrammingSolution::lengthOfLIS(vector<int> &nums) {
+    /*
+     * O(n^2)
+     */
     if (!nums.size()) return 0;
-    vector<int> dp(nums.size()+1, 0);
-    dp[1] = 1;
+    // Array is faster than Vector
+    int* dp = (int*)malloc(sizeof(int) * (nums.size()));
+    dp[0] = 1;
     int length = 1;
 
-    for (int i = 2; i < nums.size()+1; ++i) {
+    for (int i = 1; i < nums.size(); ++i) {
         dp[i] = 1;
 
-        for (int j = 1; j < i; ++j) {
+        for (int j = 0; j < i; ++j) {
             if (nums[i] >= nums[j]) {
-                dp[i] = max(dp[i], dp[j] + 1);
+                dp[i] = dp[i] > dp[j] + 1 ? dp[i] : dp[j] + 1;
             }
         }
 
-        length = max(length, dp[i]);
+        length = length > dp[i] ? length : dp[i];
     }
 
     return length;
+}
+
+/*
+ * O(n * log(n))
+ */
+int DynamicProgrammingSolution::lengthOfLIS(vector<int> &nums, bool useBinarySeaarch) {
+    if (!useBinarySeaarch) return this->lengthOfLIS(nums);
+
+
+}
+
+int DynamicProgrammingSolution::maxProfit(vector<int> &prices) {
+    if (prices.size() <= 1) return 0;
+    int buyPrice = prices[0], maxProfit = 0;
+
+    for (int i = 1; i < prices.size(); ++i) {
+        buyPrice = prices[i-1] < buyPrice ? prices[i-1] : buyPrice;
+        maxProfit = max(prices[i] - buyPrice, maxProfit);
+    }
+
+    return maxProfit;
+}
+
+int DynamicProgrammingSolution::maxProfitWithMultiTransactions(vector<int> &prices) {
+    if (prices.size() <= 1) return 0;
+    int maxProfit = 0;
+
+    for (int i = 1; i < prices.size(); ++i) {
+        int profit = prices[i] - prices[i-1];
+        maxProfit += profit > 0 ? profit : 0;
+    }
+
+    return maxProfit;
 }

@@ -13,9 +13,9 @@ using namespace std;
 
 class DynamicProgrammingSolution {
 public:
-    int maxSubArray(vector<int>& nums);
+    static int maxSubArray(vector<int>& nums);
     int maxProduct(vector<int>& nums); // LeetCode 152
-    int minPathSum(vector<vector<int>>& grid); // LeetCode 64
+    static int minPathSum(vector<vector<int>>& grid); // LeetCode 64
     int minimumTotal(vector<vector<int>>& triangle); // LeetCode 120;
     int findLongestChain(vector<vector<int>>& pairs); // LeetCode 646;
     vector<vector<int>> findSubsequences(vector<int>& nums); // LeetCode 491;
@@ -27,10 +27,13 @@ public:
     int lenLongestFibSubseq(vector<int>& A);
     int integerBreak(int n); // LeetCode 343;
     vector<int> countBits(int num); // LeetCode 338;
-    int rob(vector<int>& nums); // LeetCode 198
-    int robInCircle(vector<int>& nums); // LeetCode 213
-    bool wordBreak(string s, vector<string>& wordDict); // LeetCode 139
+    static int rob(vector<int>& nums); // LeetCode 198
+    static int robInCircle(vector<int>& nums); // LeetCode 213
+    bool wordBreak(const string& s, vector<string>& wordDict); // LeetCode 139
     int lengthOfLIS(vector<int>& nums); // LeetCode 300
+    int lengthOfLIS(vector<int>& nums, bool useBinarySeaarch); // LeetCode 300 O(n * log(n))
+    int maxProfit(vector<int>& prices); // LeetCode 121;
+    static int maxProfitWithMultiTransactions(vector<int>& prices); // LeetCode 122
 };
 
 
