@@ -3,6 +3,19 @@ project(LeetCode)
 
 set(CMAKE_CXX_STANDARD 14)
 
+message(STATUS "start running cmake...")
+find_package(Boost 1.67.0)
+
+if(Boost_FOUND)
+
+    message(STATUS "Boost_INCLUDE_DIRS: ${Boost_INCLUDE_DIRS}")
+    message(STATUS "Boost_LIBRARIES: ${Boost_LIBRARIES}")
+    message(STATUS "Boost_VERSION: ${Boost_VERSION}")
+
+    include_directories(${Boost_INCLUDE_DIRS})
+    link_directories(/usr/local/lib)
+endif()
+
 add_executable(
         LeetCode
         LeetCode.cpp
@@ -19,3 +32,9 @@ add_executable(
         SortAlgorithm.cpp
         SortAlgorithm.h
         Common.h EasySolution.cpp EasySolution.h OfferSolution.cpp OfferSolution.h BinarySearchSolution.cpp BinarySearchSolution.h)
+
+if(Boost_FOUND)
+
+    target_link_libraries(${PROJECT_NAME} ${Boost_LIBRARIES})
+
+endif()

@@ -5,7 +5,6 @@
 #include "FunSolution.h"
 #include "SortAlgorithm.h"
 
-
 void RunDynamicProgrammingQuestions()
 {
     DynamicProgrammingSolution dps;
@@ -58,6 +57,11 @@ void RunDynamicProgrammingQuestions()
     auto lengthOfLIS = dps.lengthOfLIS(nums);
 
     auto countBits = dps.countBits(2);
+
+    auto longest = dps.longestCommonSubsequence("abc", "def");
+
+    vector<int> insertList = { 1, 1, 2, 2};
+    auto permute = dps.permuteUnique(insertList);
 }
 
 void MathTest()
@@ -104,7 +108,7 @@ void SortTest()
 }
 
 int main() {
-    std::cout << 'Test, Begin!' << std::endl;
+    std::cout << "Test, Begin!" << std::endl;
 
     RunDynamicProgrammingQuestions();
 
@@ -112,7 +116,7 @@ int main() {
 //    FunTest();
 
 //    SortTest();
-    std::cout << 'Test, End!' << std::endl;
+    std::cout << "Test, End!" << std::endl;
     return 0;
 }
 

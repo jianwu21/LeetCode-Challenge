@@ -89,3 +89,16 @@ int FunSolution::islandPerimeter(vector<vector<int>>& grid) {
 
     return numOfStripes;
 }
+
+double FunSolution::myPow(double x, int n) {
+	double pow = 1.0;
+	long exp = abs((long)n);
+	while (exp)
+	{
+		if (exp&1 == 1) pow *= x;
+		exp >>= 1;
+		x *= x;
+	}
+
+	return n > 0 ? pow : 1/pow;
+}

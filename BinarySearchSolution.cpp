@@ -10,10 +10,9 @@ bool BinarySearchSolution::searchMatrix(vector<vector<int>> &matrix, int target)
     int front = 0, back = h - 1;
 
     while (front < back) {
-        int mid = front + (back - front) / 2;
+        int mid = (back + front) / 2;
 
-        if (matrix[mid].front() == target) return true;
-        else if (matrix[mid].front() < target) front = mid;
+        if (matrix[mid].front() <= target) front = mid;
         else back = mid - 1;
     }
 }

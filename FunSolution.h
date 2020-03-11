@@ -15,6 +15,7 @@ public:
     int islandPerimeter(vector<vector<int>>& grid); // LeetCode 463
     int numIslands(vector<vector<char>>& grid); // LeetCode 200
     int maxAreaOfIsland(vector<vector<int>>& grid); // LeetCode 695
+	double myPow(double x, int n); // LeetCode 50
 };
 
 

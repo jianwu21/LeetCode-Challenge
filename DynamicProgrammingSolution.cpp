@@ -338,6 +338,8 @@ int DynamicProgrammingSolution::maxProfit(vector<int> &prices) {
 }
 
 int DynamicProgrammingSolution::maxProfitWithMultiTransactions(vector<int> &prices) {
+
+    // TODO: Implement
     if (prices.size() <= 1) return 0;
     int maxProfit = 0;
 
@@ -347,4 +349,110 @@ int DynamicProgrammingSolution::maxProfitWithMultiTransactions(vector<int> &pric
     }
 
     return maxProfit;
+}
+
+int DynamicProgrammingSolution::longestCommonSubsequence(string text1, string text2) {
+    if (!text1.size() || !text2.size()) return 0;
+    vector<vector<int>> dp(text1.size()+1, vector<int>(text2.size()+1, 0));
+
+    for (int i = 1; i < text1.size()+1; ++i)
+    {
+        for (int j = 1; j < text2.size()+1; ++j)
+        {
+            if (text1[i-1] == text2[j-1]) dp[i][j] = dp[i-1][j-1] + 1;
+            else dp[i][j] = max(dp[i-1][j], dp[i][j-1]);
+        }
+    }
+
+    return dp.back().back();
+}
+
+int DynamicProgrammingSolution::findLength(vector<int> &A, vector<int> &B) {
+    if (!A.size() || !B.size()) return 0;
+
+    int longest = 0;
+    vector<vector<int>> dp(A.size(), vector<int>(B.size(), 0));
+
+    for (int i = 0; i < A.size(); ++i) {
+        dp[i].front() = (A[i] == B.front()) ? 1 : 0;
+    }
+
+    for (int i = 0; i < B.size(); ++i) {
+        dp.front()[i] = (A.front() == B[i]) ? 1 : 0;
+    }
+
+    for (int i = 1; i < A.size(); ++i) {
+        for (int j = 1; j < B.size(); ++j) {
+            if ((A[i] == B[j]))
+                dp[i][j] = dp[i-1][j-1] + 1;
+            longest = max(dp[i][j], longest);
+        }
+    }
+
+    return longest;
+}
+
+vector<string> DynamicProgrammingSolution::generateParenthesis(int n)
+{
+    if (n == 1) return {"()"};
+    vector<string> results;
+
+    for (const auto& oldRe : generateParenthesis(n-1))
+    {
+        results.push_back("(" + oldRe + ")");
+        results.push_back("()" + oldRe);
+        if ("()" + oldRe != oldRe + "()")
+        {
+            results.push_back(oldRe + "()");
+        }
+    }
+
+    return results;
+}
+
+vector<vector<int>> DynamicProgrammingSolution::permute(vector<int> &nums) {
+    if (nums.empty()) return {};
+    vector<vector<vector<int>>> res;
+    res.push_back({{ nums[0] }});
+
+    for (int i = 1; i < nums.size(); ++i)
+    {
+        vector<vector<int>> cur;
+        for (const vector<int>& r : res.back())
+        {
+            for (int it = 0; it <= r.size(); ++it)
+            {
+                auto n = r;
+                n.insert(n.begin()+it, nums[i]);
+                cur.push_back(n);
+            }
+        }
+        res.push_back(cur);
+    }
+
+    return res.back();
+}
+
+vector<vector<int> > DynamicProgrammingSolution::permuteUnique(vector<int> &nums) {
+    if (nums.empty()) return {};
+    vector<vector<vector<int>>> res;
+    res.push_back({{nums[0]}});
+
+    for (int i = 1; i < nums.size(); ++i)
+    {
+        vector<vector<int>> cur;
+        for (const vector<int>& r : res.back())
+        {
+            for (int it = 0; it <= r.size(); ++it)
+            {
+                if (it >= 1 && nums[i] == r[it-1]) continue;
+                auto n = r;
+                n.insert(n.begin()+it, nums[i]);
+                cur.push_back(n);
+            }
+        }
+        res.push_back(cur);
+    }
+
+    return res.back();
 }

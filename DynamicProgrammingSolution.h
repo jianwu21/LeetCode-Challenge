@@ -34,6 +34,11 @@ public:
     int lengthOfLIS(vector<int>& nums, bool useBinarySeaarch); // LeetCode 300 O(n * log(n))
     int maxProfit(vector<int>& prices); // LeetCode 121;
     static int maxProfitWithMultiTransactions(vector<int>& prices); // LeetCode 122
+    static int longestCommonSubsequence(string text1, string text2); // 1143
+    int findLength(vector<int>& A, vector<int>& B); //718
+    static vector<string> generateParenthesis(int n); // 22
+    static vector<vector<int>> permute(vector<int>& nums); // 46
+    static vector<vector<int>> permuteUnique(vector<int>& nums); // 47
 };
 
 
