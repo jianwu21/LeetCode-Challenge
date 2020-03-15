@@ -456,3 +456,48 @@ vector<vector<int> > DynamicProgrammingSolution::permuteUnique(vector<int> &nums
 
     return res.back();
 }
+
+int DynamicProgrammingSolution::nthUglyNumber(int n)
+{
+	if (n <= 1) return n;
+	vector<int> res(n, INT_MAX);
+	res[0] = 1;
+	int p2 = 0, p3 = 0, p5 = 0;
+
+	for (int i = 1; i < n; ++i)
+	{
+		res[i] = min(min(2 * res[p2], 3 * res[p3]), 5 * res[p5]);
+
+		if (res[i] == 2 * res[p2]) ++p2;
+		if (res[i] == 3 * res[p3]) ++p3;
+		if (res[i] == 5 * res[p5]) ++p5;
+	}
+
+	return res.back();
+}
+
+int DynamicProgrammingSolution::nthUglyNumber(int n, bool useMinHeap)
+{
+	priority_queue<long, vector<long>, greater<long>> q;
+	long ans = 1;
+
+	for (int i = 1; i < n; ++i)
+	{
+		q.push(ans * 2);
+		q.push(ans * 3);
+		q.push(ans * 5);
+		ans = q.top();
+		q.pop();
+		while (!q.empty() && q.top() == ans)
+		{
+			q.pop();
+		}
+	}
+
+	return ans;
+}
+
+int DynamicProgrammingSolution::maximalSquare(vector<vector<char>> &matrix)
+{
+
+}

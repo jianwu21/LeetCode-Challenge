@@ -8,6 +8,7 @@
 #include "Common.h"
 #include <string>
 #include <vector>
+#include <queue>
 
 using namespace std;
 
@@ -39,6 +40,9 @@ public:
     static vector<string> generateParenthesis(int n); // 22
     static vector<vector<int>> permute(vector<int>& nums); // 46
     static vector<vector<int>> permuteUnique(vector<int>& nums); // 47
+	int nthUglyNumber(int n); // 264
+	int nthUglyNumber(int n, bool useMinHeap = true);
+	int maximalSquare(vector<vector<char>>& matrix); //221
 };
 
 
