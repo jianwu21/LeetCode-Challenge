@@ -31,7 +31,15 @@ add_executable(
         FunSolution.h
         SortAlgorithm.cpp
         SortAlgorithm.h
-        Common.h EasySolution.cpp EasySolution.h OfferSolution.cpp OfferSolution.h BinarySearchSolution.cpp BinarySearchSolution.h)
+        Common.h 
+        EasySolution.cpp
+        EasySolution.h
+        OfferSolution.cpp
+        OfferSolution.h
+        BinarySearchSolution.cpp
+        BinarySearchSolution.h
+        DoublePtrSolution.cpp
+        DoublePtrSolution.h StackSolution.cpp StackSolution.h)
 
 if(Boost_FOUND)
 

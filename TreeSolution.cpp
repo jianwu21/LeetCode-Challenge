@@ -3,6 +3,7 @@
 //
 
 #include "TreeSolution.h"
+#include <stack>
 
 
 inline TreeNode* CreateBT(vector<int>& _vec)
@@ -17,4 +18,20 @@ int TreeSolution::rangeSumBST(TreeNode *root, int L, int R) {
         (root->val <= R && root->val >= L) ? root->val : 0) +
         rangeSumBST(root->left, L, R) +
         rangeSumBST(root->right, L, R);
+}
+
+bool TreeSolution::isValidBST(TreeNode *root)
+{
+	if (!root) return true;
+
+	if (isValidBST(root->left))
+	{
+		if (!s.empty() && root->val <= s.top())
+			return false;
+		s.push(root->val);
+
+		return isValidBST(root->right);
+	}
+
+	return false;
 }

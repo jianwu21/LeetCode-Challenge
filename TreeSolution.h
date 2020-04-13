@@ -6,6 +6,7 @@
 #define LEETCODE_TREESOLUTION_H
 
 #include <queue>
+#include <stack>
 #include <vector>
 
 #include "Common.h"
@@ -16,7 +17,11 @@ using namespace std;
 inline TreeNode* CreateBT(vector<int>& _vec);
 
 class TreeSolution {
+private:
+	stack<int> s;
+public:	
     int rangeSumBST(TreeNode* root, int L, int R); // LeetCode 938
+	bool isValidBST(TreeNode* root); // LeetCode 98
 };
 
 

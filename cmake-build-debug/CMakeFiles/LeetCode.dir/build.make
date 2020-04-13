@@ -109,12 +109,96 @@ CMakeFiles/LeetCode.dir/TreeSolution.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LeetCode.dir/TreeSolution.cpp.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/jwu/jwu/LeetCode/TreeSolution.cpp -o CMakeFiles/LeetCode.dir/TreeSolution.cpp.s
 
+CMakeFiles/LeetCode.dir/MathSolution.cpp.o: CMakeFiles/LeetCode.dir/flags.make
+CMakeFiles/LeetCode.dir/MathSolution.cpp.o: ../MathSolution.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jwu/jwu/LeetCode/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/LeetCode.dir/MathSolution.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LeetCode.dir/MathSolution.cpp.o -c /Users/jwu/jwu/LeetCode/MathSolution.cpp
+
+CMakeFiles/LeetCode.dir/MathSolution.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LeetCode.dir/MathSolution.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/jwu/jwu/LeetCode/MathSolution.cpp > CMakeFiles/LeetCode.dir/MathSolution.cpp.i
+
+CMakeFiles/LeetCode.dir/MathSolution.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LeetCode.dir/MathSolution.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/jwu/jwu/LeetCode/MathSolution.cpp -o CMakeFiles/LeetCode.dir/MathSolution.cpp.s
+
+CMakeFiles/LeetCode.dir/FunSolution.cpp.o: CMakeFiles/LeetCode.dir/flags.make
+CMakeFiles/LeetCode.dir/FunSolution.cpp.o: ../FunSolution.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jwu/jwu/LeetCode/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/LeetCode.dir/FunSolution.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LeetCode.dir/FunSolution.cpp.o -c /Users/jwu/jwu/LeetCode/FunSolution.cpp
+
+CMakeFiles/LeetCode.dir/FunSolution.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LeetCode.dir/FunSolution.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/jwu/jwu/LeetCode/FunSolution.cpp > CMakeFiles/LeetCode.dir/FunSolution.cpp.i
+
+CMakeFiles/LeetCode.dir/FunSolution.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LeetCode.dir/FunSolution.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/jwu/jwu/LeetCode/FunSolution.cpp -o CMakeFiles/LeetCode.dir/FunSolution.cpp.s
+
+CMakeFiles/LeetCode.dir/SortAlgorithm.cpp.o: CMakeFiles/LeetCode.dir/flags.make
+CMakeFiles/LeetCode.dir/SortAlgorithm.cpp.o: ../SortAlgorithm.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jwu/jwu/LeetCode/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/LeetCode.dir/SortAlgorithm.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LeetCode.dir/SortAlgorithm.cpp.o -c /Users/jwu/jwu/LeetCode/SortAlgorithm.cpp
+
+CMakeFiles/LeetCode.dir/SortAlgorithm.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LeetCode.dir/SortAlgorithm.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/jwu/jwu/LeetCode/SortAlgorithm.cpp > CMakeFiles/LeetCode.dir/SortAlgorithm.cpp.i
+
+CMakeFiles/LeetCode.dir/SortAlgorithm.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LeetCode.dir/SortAlgorithm.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/jwu/jwu/LeetCode/SortAlgorithm.cpp -o CMakeFiles/LeetCode.dir/SortAlgorithm.cpp.s
+
+CMakeFiles/LeetCode.dir/EasySolution.cpp.o: CMakeFiles/LeetCode.dir/flags.make
+CMakeFiles/LeetCode.dir/EasySolution.cpp.o: ../EasySolution.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jwu/jwu/LeetCode/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/LeetCode.dir/EasySolution.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LeetCode.dir/EasySolution.cpp.o -c /Users/jwu/jwu/LeetCode/EasySolution.cpp
+
+CMakeFiles/LeetCode.dir/EasySolution.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LeetCode.dir/EasySolution.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/jwu/jwu/LeetCode/EasySolution.cpp > CMakeFiles/LeetCode.dir/EasySolution.cpp.i
+
+CMakeFiles/LeetCode.dir/EasySolution.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LeetCode.dir/EasySolution.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/jwu/jwu/LeetCode/EasySolution.cpp -o CMakeFiles/LeetCode.dir/EasySolution.cpp.s
+
+CMakeFiles/LeetCode.dir/OfferSolution.cpp.o: CMakeFiles/LeetCode.dir/flags.make
+CMakeFiles/LeetCode.dir/OfferSolution.cpp.o: ../OfferSolution.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jwu/jwu/LeetCode/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/LeetCode.dir/OfferSolution.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LeetCode.dir/OfferSolution.cpp.o -c /Users/jwu/jwu/LeetCode/OfferSolution.cpp
+
+CMakeFiles/LeetCode.dir/OfferSolution.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LeetCode.dir/OfferSolution.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/jwu/jwu/LeetCode/OfferSolution.cpp > CMakeFiles/LeetCode.dir/OfferSolution.cpp.i
+
+CMakeFiles/LeetCode.dir/OfferSolution.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LeetCode.dir/OfferSolution.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/jwu/jwu/LeetCode/OfferSolution.cpp -o CMakeFiles/LeetCode.dir/OfferSolution.cpp.s
+
+CMakeFiles/LeetCode.dir/BinarySearchSolution.cpp.o: CMakeFiles/LeetCode.dir/flags.make
+CMakeFiles/LeetCode.dir/BinarySearchSolution.cpp.o: ../BinarySearchSolution.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/jwu/jwu/LeetCode/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/LeetCode.dir/BinarySearchSolution.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/LeetCode.dir/BinarySearchSolution.cpp.o -c /Users/jwu/jwu/LeetCode/BinarySearchSolution.cpp
+
+CMakeFiles/LeetCode.dir/BinarySearchSolution.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/LeetCode.dir/BinarySearchSolution.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/jwu/jwu/LeetCode/BinarySearchSolution.cpp > CMakeFiles/LeetCode.dir/BinarySearchSolution.cpp.i
+
+CMakeFiles/LeetCode.dir/BinarySearchSolution.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/LeetCode.dir/BinarySearchSolution.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/jwu/jwu/LeetCode/BinarySearchSolution.cpp -o CMakeFiles/LeetCode.dir/BinarySearchSolution.cpp.s
+
 # Object files for target LeetCode
 LeetCode_OBJECTS = \
 "CMakeFiles/LeetCode.dir/LeetCode.cpp.o" \
 "CMakeFiles/LeetCode.dir/DynamicProgrammingSolution.cpp.o" \
 "CMakeFiles/LeetCode.dir/LinkedListSolution.cpp.o" \
-"CMakeFiles/LeetCode.dir/TreeSolution.cpp.o"
+"CMakeFiles/LeetCode.dir/TreeSolution.cpp.o" \
+"CMakeFiles/LeetCode.dir/MathSolution.cpp.o" \
+"CMakeFiles/LeetCode.dir/FunSolution.cpp.o" \
+"CMakeFiles/LeetCode.dir/SortAlgorithm.cpp.o" \
+"CMakeFiles/LeetCode.dir/EasySolution.cpp.o" \
+"CMakeFiles/LeetCode.dir/OfferSolution.cpp.o" \
+"CMakeFiles/LeetCode.dir/BinarySearchSolution.cpp.o"
 
 # External object files for target LeetCode
 LeetCode_EXTERNAL_OBJECTS =
@@ -123,9 +207,15 @@ LeetCode: CMakeFiles/LeetCode.dir/LeetCode.cpp.o
 LeetCode: CMakeFiles/LeetCode.dir/DynamicProgrammingSolution.cpp.o
 LeetCode: CMakeFiles/LeetCode.dir/LinkedListSolution.cpp.o
 LeetCode: CMakeFiles/LeetCode.dir/TreeSolution.cpp.o
+LeetCode: CMakeFiles/LeetCode.dir/MathSolution.cpp.o
+LeetCode: CMakeFiles/LeetCode.dir/FunSolution.cpp.o
+LeetCode: CMakeFiles/LeetCode.dir/SortAlgorithm.cpp.o
+LeetCode: CMakeFiles/LeetCode.dir/EasySolution.cpp.o
+LeetCode: CMakeFiles/LeetCode.dir/OfferSolution.cpp.o
+LeetCode: CMakeFiles/LeetCode.dir/BinarySearchSolution.cpp.o
 LeetCode: CMakeFiles/LeetCode.dir/build.make
 LeetCode: CMakeFiles/LeetCode.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/jwu/jwu/LeetCode/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable LeetCode"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/jwu/jwu/LeetCode/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable LeetCode"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/LeetCode.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

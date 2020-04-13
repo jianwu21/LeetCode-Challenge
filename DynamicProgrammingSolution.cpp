@@ -499,5 +499,6 @@ int DynamicProgrammingSolution::nthUglyNumber(int n, bool useMinHeap)
 
 int DynamicProgrammingSolution::maximalSquare(vector<vector<char>> &matrix)
 {
-
+//	if ()
+	return 0;
 }

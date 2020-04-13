@@ -3,6 +3,7 @@
 #include "DynamicProgrammingSolution.h"
 #include "MathSolution.h"
 #include "FunSolution.h"
+#include "StackSolution.h"
 #include "SortAlgorithm.h"
 
 void RunDynamicProgrammingQuestions()
@@ -107,15 +108,24 @@ void SortTest()
     sa.quickSort(a, 0, 6);
 }
 
+void StackSolutionTest()
+{
+	StackSolution ss;
+	string preOrder = "9,#,92,#,#";
+
+	auto isValidBT = ss.isValidSerialization(preOrder);
+}
+
 int main() {
     std::cout << "Test, Begin!" << std::endl;
 
-    RunDynamicProgrammingQuestions();
-
+//    RunDynamicProgrammingQuestions();
 //    MathTest();
 //    FunTest();
 
 //    SortTest();
+
+	StackSolutionTest();
     std::cout << "Test, End!" << std::endl;
     return 0;
 }

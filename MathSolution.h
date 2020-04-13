@@ -8,7 +8,7 @@
 
 class MathSolution {
 public:
-    int mySqrt(int x);
+  int mySqrt(int x);
 };
 
 

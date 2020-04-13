@@ -8,7 +8,8 @@
 #include "Common.h"
 
 class LinkedListSolution {
-
+public:
+	ListNode* deleteNode(ListNode* head, int val);
 };
 
 

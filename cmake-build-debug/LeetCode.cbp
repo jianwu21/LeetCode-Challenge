@@ -5,7 +5,7 @@
 		<Option title="LeetCode"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\usr\;CMake Files\..\..\..\..\usr\local\;CMake Files\..\..\..\..\usr\local\lib\;CMake Files\..\..\..\..\usr\local\lib\cmake\;CMake Files\..\..\..\..\usr\local\lib\cmake\Boost-1.72.0\;CMake Files\..\..\..\..\usr\local\lib\cmake\boost_headers-1.72.0\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="/Users/jwu/jwu/LeetCode/cmake-build-debug"/>
@@ -44,8 +44,8 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.0/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
 					<Add directory="/System/Library/Frameworks"/>
@@ -65,8 +65,8 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
 					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.0/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
 					<Add directory="/System/Library/Frameworks"/>
@@ -80,10 +80,31 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/jwu/jwu/LeetCode/BinarySearchSolution.cpp">
+			<Option target="LeetCode"/>
+		</Unit>
+		<Unit filename="/Users/jwu/jwu/LeetCode/BinarySearchSolution.h">
+			<Option target="LeetCode"/>
+		</Unit>
+		<Unit filename="/Users/jwu/jwu/LeetCode/Common.h">
+			<Option target="LeetCode"/>
+		</Unit>
 		<Unit filename="/Users/jwu/jwu/LeetCode/DynamicProgrammingSolution.cpp">
 			<Option target="LeetCode"/>
 		</Unit>
 		<Unit filename="/Users/jwu/jwu/LeetCode/DynamicProgrammingSolution.h">
+			<Option target="LeetCode"/>
+		</Unit>
+		<Unit filename="/Users/jwu/jwu/LeetCode/EasySolution.cpp">
+			<Option target="LeetCode"/>
+		</Unit>
+		<Unit filename="/Users/jwu/jwu/LeetCode/EasySolution.h">
+			<Option target="LeetCode"/>
+		</Unit>
+		<Unit filename="/Users/jwu/jwu/LeetCode/FunSolution.cpp">
+			<Option target="LeetCode"/>
+		</Unit>
+		<Unit filename="/Users/jwu/jwu/LeetCode/FunSolution.h">
 			<Option target="LeetCode"/>
 		</Unit>
 		<Unit filename="/Users/jwu/jwu/LeetCode/LeetCode.cpp">
@@ -95,6 +116,24 @@
 		<Unit filename="/Users/jwu/jwu/LeetCode/LinkedListSolution.h">
 			<Option target="LeetCode"/>
 		</Unit>
+		<Unit filename="/Users/jwu/jwu/LeetCode/MathSolution.cpp">
+			<Option target="LeetCode"/>
+		</Unit>
+		<Unit filename="/Users/jwu/jwu/LeetCode/MathSolution.h">
+			<Option target="LeetCode"/>
+		</Unit>
+		<Unit filename="/Users/jwu/jwu/LeetCode/OfferSolution.cpp">
+			<Option target="LeetCode"/>
+		</Unit>
+		<Unit filename="/Users/jwu/jwu/LeetCode/OfferSolution.h">
+			<Option target="LeetCode"/>
+		</Unit>
+		<Unit filename="/Users/jwu/jwu/LeetCode/SortAlgorithm.cpp">
+			<Option target="LeetCode"/>
+		</Unit>
+		<Unit filename="/Users/jwu/jwu/LeetCode/SortAlgorithm.h">
+			<Option target="LeetCode"/>
+		</Unit>
 		<Unit filename="/Users/jwu/jwu/LeetCode/TreeSolution.cpp">
 			<Option target="LeetCode"/>
 		</Unit>
@@ -103,6 +142,18 @@
 		</Unit>
 		<Unit filename="/Users/jwu/jwu/LeetCode/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/Users/jwu/jwu/LeetCode/../../../../usr/local/lib/cmake/Boost-1.72.0/BoostConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\Boost-1.72.0\"/>
+		</Unit>
+		<Unit filename="/Users/jwu/jwu/LeetCode/../../../../usr/local/lib/cmake/Boost-1.72.0/BoostConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\Boost-1.72.0\"/>
+		</Unit>
+		<Unit filename="/Users/jwu/jwu/LeetCode/../../../../usr/local/lib/cmake/boost_headers-1.72.0/boost_headers-config-version.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\boost_headers-1.72.0\"/>
+		</Unit>
+		<Unit filename="/Users/jwu/jwu/LeetCode/../../../../usr/local/lib/cmake/boost_headers-1.72.0/boost_headers-config.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\boost_headers-1.72.0\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>

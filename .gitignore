@@ -2,3 +2,17 @@
 /workspace.xml
 
 .idea/*
+
+.vscode/*
+build/*
+CMakeFiles/*
+
+cmake-build-debug/**
+cmake-build-debug/CMakeFiles/*
+
+*.cmake
+CMakeCache.txt
+
+*.cbp
+
+Makefile

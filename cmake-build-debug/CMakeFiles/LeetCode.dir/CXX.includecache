@@ -6,13 +6,53 @@
 
 #IncludeRegexTransform: 
 
+/Users/jwu/jwu/LeetCode/Common.h
+iostream
+-
+
 /Users/jwu/jwu/LeetCode/DynamicProgrammingSolution.cpp
 algorithm
+-
+numeric
+-
+cmath
 -
 DynamicProgrammingSolution.h
 /Users/jwu/jwu/LeetCode/DynamicProgrammingSolution.h
 
 /Users/jwu/jwu/LeetCode/DynamicProgrammingSolution.h
+Common.h
+/Users/jwu/jwu/LeetCode/Common.h
+string
+-
 vector
 -
+queue
+-
+
+/Users/jwu/jwu/LeetCode/FunSolution.h
+vector
+-
+
+/Users/jwu/jwu/LeetCode/LeetCode.cpp
+iostream
+-
+DynamicProgrammingSolution.h
+/Users/jwu/jwu/LeetCode/DynamicProgrammingSolution.h
+MathSolution.h
+/Users/jwu/jwu/LeetCode/MathSolution.h
+FunSolution.h
+/Users/jwu/jwu/LeetCode/FunSolution.h
+SortAlgorithm.h
+/Users/jwu/jwu/LeetCode/SortAlgorithm.h
+
+/Users/jwu/jwu/LeetCode/MathSolution.cpp
+MathSolution.h
+/Users/jwu/jwu/LeetCode/MathSolution.h
+algorithm
+-
+
+/Users/jwu/jwu/LeetCode/MathSolution.h
+
+/Users/jwu/jwu/LeetCode/SortAlgorithm.h
 

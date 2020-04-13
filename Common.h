@@ -11,8 +11,7 @@ typedef struct ListNode{
     int val;
     ListNode* next;
 
-    ListNode() : next(nullptr)
-    {}
+	ListNode(int x) : val(x), next(NULL) {}
 } ListNode;
 
 typedef struct TreeNode {

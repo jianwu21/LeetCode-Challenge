@@ -123,6 +123,33 @@ LeetCode/fast:
 	$(MAKE) -f CMakeFiles/LeetCode.dir/build.make CMakeFiles/LeetCode.dir/build
 .PHONY : LeetCode/fast
 
+BinarySearchSolution.o: BinarySearchSolution.cpp.o
+
+.PHONY : BinarySearchSolution.o
+
+# target to build an object file
+BinarySearchSolution.cpp.o:
+	$(MAKE) -f CMakeFiles/LeetCode.dir/build.make CMakeFiles/LeetCode.dir/BinarySearchSolution.cpp.o
+.PHONY : BinarySearchSolution.cpp.o
+
+BinarySearchSolution.i: BinarySearchSolution.cpp.i
+
+.PHONY : BinarySearchSolution.i
+
+# target to preprocess a source file
+BinarySearchSolution.cpp.i:
+	$(MAKE) -f CMakeFiles/LeetCode.dir/build.make CMakeFiles/LeetCode.dir/BinarySearchSolution.cpp.i
+.PHONY : BinarySearchSolution.cpp.i
+
+BinarySearchSolution.s: BinarySearchSolution.cpp.s
+
+.PHONY : BinarySearchSolution.s
+
+# target to generate assembly for a file
+BinarySearchSolution.cpp.s:
+	$(MAKE) -f CMakeFiles/LeetCode.dir/build.make CMakeFiles/LeetCode.dir/BinarySearchSolution.cpp.s
+.PHONY : BinarySearchSolution.cpp.s
+
 DynamicProgrammingSolution.o: DynamicProgrammingSolution.cpp.o
 
 .PHONY : DynamicProgrammingSolution.o
@@ -149,6 +176,60 @@ DynamicProgrammingSolution.s: DynamicProgrammingSolution.cpp.s
 DynamicProgrammingSolution.cpp.s:
 	$(MAKE) -f CMakeFiles/LeetCode.dir/build.make CMakeFiles/LeetCode.dir/DynamicProgrammingSolution.cpp.s
 .PHONY : DynamicProgrammingSolution.cpp.s
+
+EasySolution.o: EasySolution.cpp.o
+
+.PHONY : EasySolution.o
+
+# target to build an object file
+EasySolution.cpp.o:
+	$(MAKE) -f CMakeFiles/LeetCode.dir/build.make CMakeFiles/LeetCode.dir/EasySolution.cpp.o
+.PHONY : EasySolution.cpp.o
+
+EasySolution.i: EasySolution.cpp.i
+
+.PHONY : EasySolution.i
+
+# target to preprocess a source file
+EasySolution.cpp.i:
+	$(MAKE) -f CMakeFiles/LeetCode.dir/build.make CMakeFiles/LeetCode.dir/EasySolution.cpp.i
+.PHONY : EasySolution.cpp.i
+
+EasySolution.s: EasySolution.cpp.s
+
+.PHONY : EasySolution.s
+
+# target to generate assembly for a file
+EasySolution.cpp.s:
+	$(MAKE) -f CMakeFiles/LeetCode.dir/build.make CMakeFiles/LeetCode.dir/EasySolution.cpp.s
+.PHONY : EasySolution.cpp.s
+
+FunSolution.o: FunSolution.cpp.o
+
+.PHONY : FunSolution.o
+
+# target to build an object file
+FunSolution.cpp.o:
+	$(MAKE) -f CMakeFiles/LeetCode.dir/build.make CMakeFiles/LeetCode.dir/FunSolution.cpp.o
+.PHONY : FunSolution.cpp.o
+
+FunSolution.i: FunSolution.cpp.i
+
+.PHONY : FunSolution.i
+
+# target to preprocess a source file
+FunSolution.cpp.i:
+	$(MAKE) -f CMakeFiles/LeetCode.dir/build.make CMakeFiles/LeetCode.dir/FunSolution.cpp.i
+.PHONY : FunSolution.cpp.i
+
+FunSolution.s: FunSolution.cpp.s
+
+.PHONY : FunSolution.s
+
+# target to generate assembly for a file
+FunSolution.cpp.s:
+	$(MAKE) -f CMakeFiles/LeetCode.dir/build.make CMakeFiles/LeetCode.dir/FunSolution.cpp.s
+.PHONY : FunSolution.cpp.s
 
 LeetCode.o: LeetCode.cpp.o
 
@@ -204,6 +285,87 @@ LinkedListSolution.cpp.s:
 	$(MAKE) -f CMakeFiles/LeetCode.dir/build.make CMakeFiles/LeetCode.dir/LinkedListSolution.cpp.s
 .PHONY : LinkedListSolution.cpp.s
 
+MathSolution.o: MathSolution.cpp.o
+
+.PHONY : MathSolution.o
+
+# target to build an object file
+MathSolution.cpp.o:
+	$(MAKE) -f CMakeFiles/LeetCode.dir/build.make CMakeFiles/LeetCode.dir/MathSolution.cpp.o
+.PHONY : MathSolution.cpp.o
+
+MathSolution.i: MathSolution.cpp.i
+
+.PHONY : MathSolution.i
+
+# target to preprocess a source file
+MathSolution.cpp.i:
+	$(MAKE) -f CMakeFiles/LeetCode.dir/build.make CMakeFiles/LeetCode.dir/MathSolution.cpp.i
+.PHONY : MathSolution.cpp.i
+
+MathSolution.s: MathSolution.cpp.s
+
+.PHONY : MathSolution.s
+
+# target to generate assembly for a file
+MathSolution.cpp.s:
+	$(MAKE) -f CMakeFiles/LeetCode.dir/build.make CMakeFiles/LeetCode.dir/MathSolution.cpp.s
+.PHONY : MathSolution.cpp.s
+
+OfferSolution.o: OfferSolution.cpp.o
+
+.PHONY : OfferSolution.o
+
+# target to build an object file
+OfferSolution.cpp.o:
+	$(MAKE) -f CMakeFiles/LeetCode.dir/build.make CMakeFiles/LeetCode.dir/OfferSolution.cpp.o
+.PHONY : OfferSolution.cpp.o
+
+OfferSolution.i: OfferSolution.cpp.i
+
+.PHONY : OfferSolution.i
+
+# target to preprocess a source file
+OfferSolution.cpp.i:
+	$(MAKE) -f CMakeFiles/LeetCode.dir/build.make CMakeFiles/LeetCode.dir/OfferSolution.cpp.i
+.PHONY : OfferSolution.cpp.i
+
+OfferSolution.s: OfferSolution.cpp.s
+
+.PHONY : OfferSolution.s
+
+# target to generate assembly for a file
+OfferSolution.cpp.s:
+	$(MAKE) -f CMakeFiles/LeetCode.dir/build.make CMakeFiles/LeetCode.dir/OfferSolution.cpp.s
+.PHONY : OfferSolution.cpp.s
+
+SortAlgorithm.o: SortAlgorithm.cpp.o
+
+.PHONY : SortAlgorithm.o
+
+# target to build an object file
+SortAlgorithm.cpp.o:
+	$(MAKE) -f CMakeFiles/LeetCode.dir/build.make CMakeFiles/LeetCode.dir/SortAlgorithm.cpp.o
+.PHONY : SortAlgorithm.cpp.o
+
+SortAlgorithm.i: SortAlgorithm.cpp.i
+
+.PHONY : SortAlgorithm.i
+
+# target to preprocess a source file
+SortAlgorithm.cpp.i:
+	$(MAKE) -f CMakeFiles/LeetCode.dir/build.make CMakeFiles/LeetCode.dir/SortAlgorithm.cpp.i
+.PHONY : SortAlgorithm.cpp.i
+
+SortAlgorithm.s: SortAlgorithm.cpp.s
+
+.PHONY : SortAlgorithm.s
+
+# target to generate assembly for a file
+SortAlgorithm.cpp.s:
+	$(MAKE) -f CMakeFiles/LeetCode.dir/build.make CMakeFiles/LeetCode.dir/SortAlgorithm.cpp.s
+.PHONY : SortAlgorithm.cpp.s
+
 TreeSolution.o: TreeSolution.cpp.o
 
 .PHONY : TreeSolution.o
@@ -240,15 +402,33 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... LeetCode"
+	@echo "... BinarySearchSolution.o"
+	@echo "... BinarySearchSolution.i"
+	@echo "... BinarySearchSolution.s"
 	@echo "... DynamicProgrammingSolution.o"
 	@echo "... DynamicProgrammingSolution.i"
 	@echo "... DynamicProgrammingSolution.s"
+	@echo "... EasySolution.o"
+	@echo "... EasySolution.i"
+	@echo "... EasySolution.s"
+	@echo "... FunSolution.o"
+	@echo "... FunSolution.i"
+	@echo "... FunSolution.s"
 	@echo "... LeetCode.o"
 	@echo "... LeetCode.i"
 	@echo "... LeetCode.s"
 	@echo "... LinkedListSolution.o"
 	@echo "... LinkedListSolution.i"
 	@echo "... LinkedListSolution.s"
+	@echo "... MathSolution.o"
+	@echo "... MathSolution.i"
+	@echo "... MathSolution.s"
+	@echo "... OfferSolution.o"
+	@echo "... OfferSolution.i"
+	@echo "... OfferSolution.s"
+	@echo "... SortAlgorithm.o"
+	@echo "... SortAlgorithm.i"
+	@echo "... SortAlgorithm.s"
 	@echo "... TreeSolution.o"
 	@echo "... TreeSolution.i"
 	@echo "... TreeSolution.s"
