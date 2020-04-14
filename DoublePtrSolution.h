@@ -13,6 +13,7 @@ class DoublePtrSolution
 {
 public:
 	void moveZeros(vector<int>& nums);
+	int removeDuplicates(vector<int>& nums);
 };
 
 #endif //LEETCODE__DOUBLEPTRSOLUTION_H

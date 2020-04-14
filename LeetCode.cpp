@@ -1,5 +1,6 @@
 #include <iostream>
 
+#include "DoublePtrSolution.h"
 #include "DynamicProgrammingSolution.h"
 #include "MathSolution.h"
 #include "FunSolution.h"
@@ -116,6 +117,14 @@ void StackSolutionTest()
 	auto isValidBT = ss.isValidSerialization(preOrder);
 }
 
+void DoublePtrSolutionTest()
+{
+	DoublePtrSolution ds;
+	vector<int> test = {0, 0, 1, 1, 1, 2, 2, 3, 3, 4};
+
+	int uni = ds.removeDuplicates(test);
+}
+
 int main() {
     std::cout << "Test, Begin!" << std::endl;
 
@@ -125,7 +134,10 @@ int main() {
 
 //    SortTest();
 
-	StackSolutionTest();
+//	StackSolutionTest();
+
+	DoublePtrSolutionTest();
+
     std::cout << "Test, End!" << std::endl;
     return 0;
 }

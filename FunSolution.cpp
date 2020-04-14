@@ -95,7 +95,7 @@ double FunSolution::myPow(double x, int n) {
 	long exp = abs((long)n);
 	while (exp)
 	{
-		if (exp&1 == 1) pow *= x;
+		if ((exp & 1) == 1) pow *= x;
 		exp >>= 1;
 		x *= x;
 	}

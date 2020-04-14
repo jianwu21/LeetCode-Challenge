@@ -320,9 +320,10 @@ int DynamicProgrammingSolution::lengthOfLIS(vector<int> &nums) {
  * O(n * log(n))
  */
 int DynamicProgrammingSolution::lengthOfLIS(vector<int> &nums, bool useBinarySeaarch) {
-    if (!useBinarySeaarch) return this->lengthOfLIS(nums);
-
-
+    if (!useBinarySeaarch) 
+        return this->lengthOfLIS(nums);
+    
+    return 0;
 }
 
 int DynamicProgrammingSolution::maxProfit(vector<int> &prices) {
@@ -383,7 +384,7 @@ int DynamicProgrammingSolution::findLength(vector<int> &A, vector<int> &B) {
 
     for (int i = 1; i < A.size(); ++i) {
         for (int j = 1; j < B.size(); ++j) {
-            if ((A[i] == B[j]))
+            if (A[i] == B[j])
                 dp[i][j] = dp[i-1][j-1] + 1;
             longest = max(dp[i][j], longest);
         }

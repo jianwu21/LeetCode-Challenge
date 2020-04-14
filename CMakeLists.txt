@@ -13,7 +13,7 @@ if(Boost_FOUND)
     message(STATUS "Boost_VERSION: ${Boost_VERSION}")
 
     include_directories(${Boost_INCLUDE_DIRS})
-    link_directories(/usr/local/lib)
+    link_directories(/usr/local/include)
 endif()
 
 add_executable(
@@ -39,7 +39,9 @@ add_executable(
         BinarySearchSolution.cpp
         BinarySearchSolution.h
         DoublePtrSolution.cpp
-        DoublePtrSolution.h StackSolution.cpp StackSolution.h)
+        DoublePtrSolution.h 
+        StackSolution.cpp 
+        StackSolution.h)
 
 if(Boost_FOUND)
 

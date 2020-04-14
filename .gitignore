@@ -16,3 +16,6 @@ CMakeCache.txt
 *.cbp
 
 Makefile
+
+# Output file
+LeetCode
