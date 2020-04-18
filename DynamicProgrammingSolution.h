@@ -43,6 +43,7 @@ public:
 	int nthUglyNumber(int n); // 264
 	int nthUglyNumber(int n, bool useMinHeap = true);
 	int maximalSquare(vector<vector<char>>& matrix); //221
+	int countNumbersWithUniqueDigits(int n); // 357
 };
 
 

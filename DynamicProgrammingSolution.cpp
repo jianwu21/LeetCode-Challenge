@@ -503,3 +503,32 @@ int DynamicProgrammingSolution::maximalSquare(vector<vector<char>> &matrix)
 //	if ()
 	return 0;
 }
+
+inline int permutation9(int n)
+{
+	if (n > 9) return 0;
+
+	if (!n) return 1;
+
+	int ans = 1;
+	while (n--)
+	{
+		ans *= (10-n);
+	}
+
+	return ans;
+}
+
+int DynamicProgrammingSolution::countNumbersWithUniqueDigits(int n)
+{
+	vector<int> ans(n+1, 0);
+
+	ans[0] = 1;
+
+	for (int i = 1; i < n + 1; ++i)
+	{
+		ans[i] = ans[i-1] + 9 * permutation9(i-1);
+	}
+
+	return ans.back();
+}

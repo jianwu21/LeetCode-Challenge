@@ -4,6 +4,7 @@
 
 #include "FunSolution.h"
 #include <queue>
+#include <cstdlib>
 
 void infect(vector<vector<char>>& grid, const int& i, const int& j, int w, int h)
 {

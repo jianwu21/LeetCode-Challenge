@@ -15,4 +15,6 @@ bool BinarySearchSolution::searchMatrix(vector<vector<int>> &matrix, int target)
         if (matrix[mid].front() <= target) front = mid;
         else back = mid - 1;
     }
+
+    return false;
 }

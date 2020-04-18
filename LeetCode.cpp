@@ -4,6 +4,7 @@
 #include "DynamicProgrammingSolution.h"
 #include "MathSolution.h"
 #include "FunSolution.h"
+#include "PathsSolution.h"
 #include "StackSolution.h"
 #include "SortAlgorithm.h"
 
@@ -125,6 +126,13 @@ void DoublePtrSolutionTest()
 	int uni = ds.removeDuplicates(test);
 }
 
+void DFSPathTest()
+{
+	PathsSolution ps;
+	vector<int> nums = { 2, 3, 6, 7};
+	auto ans = ps.combinationSum(nums, 7);
+}
+
 int main() {
     std::cout << "Test, Begin!" << std::endl;
 
@@ -136,7 +144,9 @@ int main() {
 
 //	StackSolutionTest();
 
-	DoublePtrSolutionTest();
+//	DoublePtrSolutionTest();
+
+	DFSPathTest();
 
     std::cout << "Test, End!" << std::endl;
     return 0;
