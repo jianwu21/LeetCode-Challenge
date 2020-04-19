@@ -4,7 +4,7 @@
 #include "DynamicProgrammingSolution.h"
 #include "MathSolution.h"
 #include "FunSolution.h"
-#include "PathsSolution.h"
+#include "BackTrackingSolution.h"
 #include "StackSolution.h"
 #include "SortAlgorithm.h"
 
@@ -128,9 +128,13 @@ void DoublePtrSolutionTest()
 
 void DFSPathTest()
 {
-	PathsSolution ps;
-	vector<int> nums = { 2, 3, 6, 7};
-	auto ans = ps.combinationSum(nums, 7);
+	BackTrackingSolution ps;
+//	vector<int> nums = { 2, 3, 6, 7};
+//	auto ans = ps.combinationSum(nums, 7);
+
+//	auto com = ps.combine(4, 2);
+
+	auto watches = ps.readBinaryWatch(2);
 }
 
 int main() {

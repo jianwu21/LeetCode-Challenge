@@ -41,7 +41,7 @@ add_executable(
     DoublePtrSolution.cpp
     DoublePtrSolution.h 
     StackSolution.cpp 
-    StackSolution.h PathsSolution.cpp PathsSolution.h)
+    StackSolution.h BackTrackingSolution.cpp BackTrackingSolution.h)
 
 if(Boost_FOUND)
 
