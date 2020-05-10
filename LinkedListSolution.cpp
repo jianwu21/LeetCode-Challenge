@@ -50,7 +50,7 @@ ListNode * LinkedListSolution::reverseList(ListNode *head)
 {
 	if (!head) return head;
 
-	ListNode* p_Prev = nullptr, *p_Cur = head, *p_Next = head->next;
+	ListNode* p_Prev = NULL, *p_Cur = head, *p_Next;
 
 	while(p_Cur)
 	{
