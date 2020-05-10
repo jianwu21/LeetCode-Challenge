@@ -4,6 +4,7 @@
 
 #include "BackTrackingSolution.h"
 
+
 void BackTrackingSolution::dfs(vector<int> &nums, int target, int pos)
 {
 	if (target == 0)
@@ -20,6 +21,29 @@ void BackTrackingSolution::dfs(vector<int> &nums, int target, int pos)
 		path.push_back(nums[i]);
 		dfs(nums, target-nums[i], i);
 
+		path.pop_back();
+	}
+}
+
+void BackTrackingSolution::dfs(vector<int> &nums, int target, int pos, int iter)
+{
+	if (iter == 4)
+	{
+		if (target == 0)
+		{
+			paths.push_back(path);
+		}
+
+		return;
+	}
+
+	if (pos > 0 && nums[pos] == nums[pos-1])
+		return;
+
+	for (int i = pos; i < nums.size(); ++i)
+	{
+		path.push_back(nums[i]);
+		dfs(nums, target-nums[i], i+1, iter+1);
 		path.pop_back();
 	}
 }
@@ -73,8 +97,7 @@ Timer BackTrackingSolution::scalesToTime(vector<int> scaleIndexes)
 
 vector<string> BackTrackingSolution::readBinaryWatch(int num)
 {
-
-	vector<string> times;
+	std::vector<string> times;
 	int n = scales.size();
 	auto scaleIndexes = combine(n, num);
 
@@ -90,4 +113,43 @@ vector<string> BackTrackingSolution::readBinaryWatch(int num)
 	auto a = ans;
 
 	return times;
+}
+
+vector<string> BackTrackingSolution::letterCasePermutation(string S)
+{
+	deque<string> strs;
+	strs.push_back("");
+
+	for (int i = 0; i < S.size(); ++i)
+	{
+		while (strs.front().size() == i)
+		{
+			auto current = strs.front();
+			strs.pop_front();
+			strs.push_back(current + S[i]);
+
+			if (isalpha(S[i]))
+			{
+				S[i] ^= 32;
+				strs.push_back(current + S[i]);
+			}
+		}
+	}
+
+	vector<string> ans;
+
+	for (const auto& str : strs)
+	{
+		ans.push_back(str);
+	}
+
+	return ans;
+}
+
+vector<vector<int> > BackTrackingSolution::fourSum(vector<int> &nums, int target)
+{
+	sort(nums.begin(), nums.end());
+	dfs(nums, target, 0, 0);
+
+	return paths;
 }

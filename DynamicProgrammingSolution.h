@@ -44,6 +44,7 @@ public:
 	int nthUglyNumber(int n, bool useMinHeap = true);
 	int maximalSquare(vector<vector<char>>& matrix); //221
 	int countNumbersWithUniqueDigits(int n); // 357
+	int fib(int n); // 509
 };
 
 

@@ -5,8 +5,11 @@
 #ifndef LEETCODE__BACKTRACKINGSOLUTION_H
 #define LEETCODE__BACKTRACKINGSOLUTION_H
 
-#include<vector>
-#include<string>
+#include <algorithm>
+#include <vector>
+#include <string>
+#include <cstring>
+#include <deque>
 
 using namespace std;
 
@@ -24,7 +27,11 @@ private:
 	vector<int> path;
 	vector<vector<int>> paths;
 
+	string str;
+	vector<string> strs;
+
 	void dfs(vector<int>& nums, int target, int pos);
+	void dfs(vector<int>& nums, int target, int pos, int iter);
 
 	vector<int> scales = {1, 2, 4, 8, 1, 2, 4, 8, 16, 32};
 
@@ -36,6 +43,8 @@ public:
 	vector<vector<int>> combinationSum(vector<int>& candidates, int target);
 	vector<vector<int>> combine(int n, int k);
 	vector<string> readBinaryWatch(int num);
+	vector<string> letterCasePermutation(string S);
+	vector<vector<int>> fourSum(vector<int>& nums, int target);
 };
 
 #endif //LEETCODE__BACKTRACKINGSOLUTION_H

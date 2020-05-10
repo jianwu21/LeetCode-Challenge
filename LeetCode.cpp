@@ -134,7 +134,12 @@ void DFSPathTest()
 
 //	auto com = ps.combine(4, 2);
 
-	auto watches = ps.readBinaryWatch(2);
+//	auto watches = ps.readBinaryWatch(2);
+
+//	auto ans = ps.letterCasePermutation("a1b2");
+
+	vector<int> nums = {-3, -2, -1, 0, 0, 1, 2, 3};
+	auto ans = ps.fourSum(nums, 0);
 }
 
 int main() {

@@ -24,3 +24,47 @@ ListNode * LinkedListSolution::deleteNode(ListNode *head, int val)
 
 	return dump->next;
 }
+
+vector<int> LinkedListSolution::reversePrint(ListNode *head)
+{
+	stack<int> s;
+	ListNode* ptr = head;
+
+	while(ptr)
+	{
+		s.push(ptr->val);
+		ptr = ptr->next;
+	}
+
+	vector<int> ans;
+	while(!s.empty())
+	{
+		ans.push_back(s.top());
+		s.pop();
+	}
+
+	return ans;
+}
+
+ListNode * LinkedListSolution::reverseList(ListNode *head)
+{
+	if (!head) return head;
+
+	ListNode* p_Prev = nullptr, *p_Cur = head, *p_Next = head->next;
+
+	while(p_Cur)
+	{
+		p_Next = p_Cur->next;
+		p_Cur->next = p_Prev;
+		p_Prev = p_Cur;
+		p_Cur = p_Next;
+	}
+
+	return p_Prev;
+}
+
+ListNode * LinkedListSolution::mergeTwoLists(ListNode *l1, ListNode *l2)
+{
+	// TODO: Implement
+	return NULL;
+}
