@@ -7,6 +7,8 @@
 #include "BackTrackingSolution.h"
 #include "StackSolution.h"
 #include "SortAlgorithm.h"
+#include "LinkedListSolution.h"
+#include "HashSolution.h"
 
 void RunDynamicProgrammingQuestions()
 {
@@ -110,6 +112,14 @@ void SortTest()
     sa.quickSort(a, 0, 6);
 }
 
+void HashSolutionTest()
+{
+	HashSolution hs;
+
+	vector<int> nums = {1, 2, 1, 2, 3};
+	auto ans = hs.subarraySum(nums, 3);
+}
+
 void StackSolutionTest()
 {
 	StackSolution ss;
@@ -142,6 +152,29 @@ void DFSPathTest()
 	auto ans = ps.fourSum(nums, 0);
 }
 
+void LinkedListTest()
+{
+	auto l1 = new ListNode(1);
+
+	auto l2 = new ListNode(2);
+	l1->next = l2;
+
+	auto l3 = new ListNode(4);
+	l2->next = l3;
+
+	auto r1 = new ListNode(1);
+
+	auto r2 = new ListNode(3);
+	r1->next = r2;
+
+	auto r3 = new ListNode(4);
+	r2->next = r3;
+
+	LinkedListSolution lls;
+
+	auto m = lls.mergeTwoLists(l1, r1);
+}
+
 int main() {
     std::cout << "Test, Begin!" << std::endl;
 
@@ -155,7 +188,11 @@ int main() {
 
 //	DoublePtrSolutionTest();
 
-	DFSPathTest();
+//	DFSPathTest();
+
+//	LinkedListTest();
+
+	HashSolutionTest();
 
     std::cout << "Test, End!" << std::endl;
     return 0;
