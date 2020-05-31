@@ -103,3 +103,119 @@ double FunSolution::myPow(double x, int n) {
 
 	return n > 0 ? pow : 1/pow;
 }
+
+int FunSolution::totalHammingDistance(vector<int> &nums)
+{
+	vector<int> ones(32, 0);
+	int count = 0;
+
+	for (auto& num : nums)
+	{
+		int i = 0;
+
+		while (num)
+		{
+			ones[i++] += (num & 1);
+			num >>= 1;
+		}
+	}
+
+	for (const auto& one : ones)
+	{
+		count += one * (nums.size() - one);
+	}
+
+	return count;
+}
+
+string FunSolution::reverseWords(string s)
+{
+//	string word = "", ans = "";
+//
+//	for (const char& c : s)
+//	{
+//		if (c == ' ')
+//		{
+//			ans += word;
+//			ans += ' ';
+//			word = "";
+//		}
+//		else
+//			word = c + word;
+//	}
+//	ans += word;
+//
+//	return ans;
+
+// using sstream
+
+	istringstream ss(s);
+	string str, ans;
+
+	while (ss >> str)
+	{
+		reverse(str.begin(), str.end());
+		ans += str + ' ';
+	}
+
+	return ans.substr(0, ans.length()-1);
+}
+
+string FunSolution::reverseStr(string s, int k)
+{
+	string::iterator front = s.begin();
+	int index = 0;
+	bool reversed = false;
+
+	for (string::iterator it = s.begin(); it != s.end(); ++it)
+	{
+		if (index == 2 * k)
+		{
+			front = it;
+			index = 0;
+			reversed = false;
+		}
+
+		if (index == k)
+		{
+			reverse(front, it);
+			reversed = true;
+		}
+
+		index++;
+	}
+
+	if (!reversed) reverse(front, s.end());
+
+	return s;
+}
+
+int FunSolution::strStr(string haystack, string needle)
+{
+	for (int i = 0; i < haystack.length(); ++i)
+	{
+		if (haystack[i] == needle[0])
+		{
+			if (haystack.substr(i, needle.length()) == needle)
+				return i;
+		}
+	}
+
+	return -1;
+}
+
+int FunSolution::smallestRepunitDivByK(int K)
+{
+	if (!(K & 1)) return -1;
+	int num = 1, count = 1;
+	while (num <= INT_MAX)
+	{
+		if (num % K == 0)
+			return count;
+
+		num = num * 10 + 1;
+		count++;
+	}
+
+	return -1;
+}

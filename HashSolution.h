@@ -14,6 +14,7 @@ class HashSolution
 {
 public:
 	int subarraySum(vector<int>& nums, int k);
+	bool checkSubarraySum(vector<int>& nums, int k);
 };
 
 #endif //LEETCODE__HASHSOLUTION_H

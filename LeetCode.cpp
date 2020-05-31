@@ -103,6 +103,11 @@ void FunTest()
     auto numOfIslands = fc.numIslands(map1);
     auto maxArea = fc.maxAreaOfIsland(grid);
     auto numOfStripes = fc.islandPerimeter(grid2);
+
+    auto s = "Let's take LeetCode contest";
+	auto ansS = fc.reverseWords(s);
+
+	auto rS = fc.reverseStr("abcdefg", 2);
 }
 
 void SortTest()
@@ -118,6 +123,9 @@ void HashSolutionTest()
 
 	vector<int> nums = {1, 2, 1, 2, 3};
 	auto ans = hs.subarraySum(nums, 3);
+
+	vector<int> nums2 = {23,2,4,6,7};
+	auto ans2 = hs.checkSubarraySum(nums2, -6);
 }
 
 void StackSolutionTest()
@@ -180,7 +188,7 @@ int main() {
 
 //    RunDynamicProgrammingQuestions();
 //    MathTest();
-//    FunTest();
+    FunTest();
 
 //    SortTest();
 
@@ -192,7 +200,7 @@ int main() {
 
 //	LinkedListTest();
 
-	HashSolutionTest();
+//	HashSolutionTest();
 
     std::cout << "Test, End!" << std::endl;
     return 0;

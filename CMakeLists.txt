@@ -45,7 +45,7 @@ add_executable(
     BackTrackingSolution.cpp
     BackTrackingSolution.h
     ConcurrentSolution.cpp
-    ConcurrentSolution.h HashSolution.cpp HashSolution.h)
+    ConcurrentSolution.h HashSolution.cpp HashSolution.h HeapSolution.cpp HeapSolution.h)
 
 if(Boost_FOUND)
 
