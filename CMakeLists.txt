@@ -31,7 +31,7 @@ add_executable(
     FunSolution.h
     SortAlgorithm.cpp
     SortAlgorithm.h
-    Common.h 
+    Common.h
     EasySolution.cpp
     EasySolution.h
     OfferSolution.cpp
@@ -39,13 +39,17 @@ add_executable(
     BinarySearchSolution.cpp
     BinarySearchSolution.h
     DoublePtrSolution.cpp
-    DoublePtrSolution.h 
-    StackSolution.cpp 
+    DoublePtrSolution.h
+    StackSolution.cpp
     StackSolution.h
     BackTrackingSolution.cpp
     BackTrackingSolution.h
     ConcurrentSolution.cpp
-    ConcurrentSolution.h HashSolution.cpp HashSolution.h HeapSolution.cpp HeapSolution.h)
+    ConcurrentSolution.h
+    HashSolution.cpp
+    HashSolution.h
+    HeapSolution.cpp
+    HeapSolution.h Graph.cpp Graph.h)
 
 if(Boost_FOUND)
 

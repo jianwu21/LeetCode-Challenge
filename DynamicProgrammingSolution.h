@@ -9,6 +9,13 @@
 #include <string>
 #include <vector>
 #include <queue>
+#include <memory>
+
+using std::shared_ptr;
+using std::vector;
+using std::greater;
+using std::string;
+using std::priority_queue;
 
 using namespace std;
 
@@ -45,6 +52,11 @@ public:
 	int maximalSquare(vector<vector<char>>& matrix); //221
 	int countNumbersWithUniqueDigits(int n); // 357
 	int fib(int n); // 509
+	int largest1BorderedSquare(vector<vector<int>>& grid); // 1139
+	int waysToChange(int n); // 08。11
+//	vector<int> findSquare(vector<vector<int>>& matrix); // 17.23
+	bool canIWin(int maxChoosableInteger, int desiredTotal); // 464
+	int findMaxForm(vector<string>& strs, int m, int n); // 474
 };
 
 

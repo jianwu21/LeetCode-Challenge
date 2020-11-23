@@ -67,6 +67,15 @@ void RunDynamicProgrammingQuestions()
 
     vector<int> insertList = { 1, 1, 2, 2};
     auto permute = dps.permuteUnique(insertList);
+
+    grid = {{1, 1, 1}, {1, 0, 1}, {1, 1, 1}};
+    auto res = dps.largest1BorderedSquare(grid);
+
+    auto ways = dps.waysToChange(10);
+
+    // 474
+	vector<string> strs = {"10", "0001", "111001", "1", "0"};
+	int maxForm = dps.findMaxForm(strs, 5, 3);
 }
 
 void MathTest()
@@ -186,9 +195,9 @@ void LinkedListTest()
 int main() {
     std::cout << "Test, Begin!" << std::endl;
 
-//    RunDynamicProgrammingQuestions();
+    RunDynamicProgrammingQuestions();
 //    MathTest();
-    FunTest();
+//    FunTest();
 
 //    SortTest();
 

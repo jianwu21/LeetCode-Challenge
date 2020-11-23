@@ -548,3 +548,123 @@ int DynamicProgrammingSolution::fib(int n)
 
 	return dp.back() % 1000000007;
 }
+
+int DynamicProgrammingSolution::largest1BorderedSquare(vector<vector<int> > &grid)
+{
+	int largestLen = 0;
+
+	vector<vector<vector<int>>> dp(
+		grid.size(), vector<vector<int>>(grid.front().size(), vector<int>(2, 0)));
+
+	dp[0][0] = grid[0][0] == 1 ? vector<int>{1, 1} : vector<int>{0, 0};
+
+	for (int i = 1; i < grid.size(); ++i)
+	{
+		dp[i][0][0] = grid[i][0] == 1 ? 1 : 0;
+		dp[i][0][1] = grid[i][0] == 1 ? dp[i-1][0][1] + 1: 0;
+		largestLen = grid[i][0] > largestLen ? grid[i][0] : largestLen;
+	}
+
+	for (int i = 1; i < grid.front().size(); ++i)
+	{
+		dp[0][i][0] = grid[0][i] == 1 ? dp[0][i-1][0] + 1 : 0;
+		dp[0][i][1] = grid[0][i] == 1 ? 1 : 0;
+		largestLen = grid[i][0] > largestLen ? grid[0][i] : largestLen;
+	}
+
+	for (int i = 1; i < grid.size(); ++i)
+	{
+		for (int j = 1; j < grid.front().size(); ++j)
+		{
+			if (grid[i][j] == 1)
+			{
+				dp[i][j][0] = dp[i][j-1][0] + 1;
+				dp[i][j][1] = dp[i-1][j][1] + 1;
+
+				int depth = min(dp[i][j][0], dp[i][j][1]);
+
+				while (depth)
+				{
+					if (dp[i-depth+1][j][0] >= depth && dp[i][j-depth+1][1] >= depth)
+					{
+						largestLen = depth > largestLen ? depth : largestLen;
+					}
+
+					depth--;
+				}
+			}
+			else
+				dp[i][j] = {0, 0};
+		}
+	}
+
+	return largestLen * largestLen;
+}
+
+int DynamicProgrammingSolution::waysToChange(int n)
+{
+	vector<int> dp(n+1, 1);
+	vector<int> coins = {1, 5, 10, 25};
+
+	for (int i = 1; i < 4; ++i)
+	{
+		for (int j = coins[i]; j < n+1; ++j)
+		{
+			dp[j] = (dp[j] + dp[j-coins[i]]) % 1000000007;
+		}
+	}
+
+	return dp.back();
+}
+
+bool DynamicProgrammingSolution::canIWin(int maxChoosableInteger, int desiredTotal)
+{
+	vector<int> dp(desiredTotal+1, 1);
+//	shared_ptr<int> ps(new int(3));
+
+	for (int j = maxChoosableInteger+1; j < desiredTotal+1; ++j)
+	{
+		int firstCanWin = 1;
+		for (int i = 1; i <= maxChoosableInteger; ++i)
+		{
+			firstCanWin |= dp[j-i];
+		}
+
+		dp[j] = !firstCanWin;
+	}
+
+	return dp.back() == 1;
+}
+
+inline int* countZeroAndOnes(string s) {
+	int c[2] = {0, 0};
+
+	for (int I = 0; I < s.size(); ++I)
+	{
+		c[s[I]-'0']++;
+	}
+	return c;
+}
+
+int DynamicProgrammingSolution::findMaxForm(vector<string> &strs, int m, int n) {
+	vector<vector<int>> dp(m+1, vector<int>(n+1, 0));
+
+	for (size_t k = 0; k < strs.size(); ++k)
+	{
+		int* counts = countZeroAndOnes(strs[k]);
+		int numOfZeros = counts[0];
+		int numOfOnes = counts[1];
+
+		for (size_t i = m; i >= numOfZeros; --i)
+		{
+			for (size_t j = n; j >= numOfOnes; --j)
+			{
+
+				dp[i][j] = max(dp[i][j], 1+dp[i-numOfZeros][j-numOfOnes]);
+			}
+		}
+	}
+
+	return dp.back().back();
+}
+
