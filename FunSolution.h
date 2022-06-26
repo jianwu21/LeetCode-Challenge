@@ -23,6 +23,8 @@ public:
 	string reverseStr(string s, int k); // LeetCode 541
 	int strStr(string haystack, string needle); // LeetCode 28
 	int smallestRepunitDivByK(int K); // LeetCode 1015
+    void nextPermutation(vector<int>& nums); // LeetCode 31
+    int nthUglyNumber(int n); // LeetCode 264
 };
 
 

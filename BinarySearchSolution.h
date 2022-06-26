@@ -11,6 +11,12 @@ using namespace std;
 
 class BinarySearchSolution {
     bool searchMatrix(vector<vector<int>>& matrix, int target);
+
+    int search(vector<int>& nums, int target); // basic binary search 704
+
+    int guessNumber(int n); // 374
+
+    int searchInsert(vector<int>& nums, int target); // 35
 };
 
 

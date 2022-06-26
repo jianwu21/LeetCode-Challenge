@@ -3,6 +3,7 @@
 //
 
 #include "SortAlgorithm.h"
+#include <exception>
 
 inline void swap(int& a, int& b) {
     int temp = a;
@@ -35,5 +36,5 @@ void SortAlgorithm::quickSort(int arr[], int left, int right) {
 }
 
 void SortAlgorithm::mergeSort() {
-
+    throw std::exception();
 }

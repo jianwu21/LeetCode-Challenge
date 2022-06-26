@@ -57,6 +57,12 @@ public:
 //	vector<int> findSquare(vector<vector<int>>& matrix); // 17.23
 	bool canIWin(int maxChoosableInteger, int desiredTotal); // 464
 	int findMaxForm(vector<string>& strs, int m, int n); // 474
+    int jump(vector<int>& nums); // 45
+    vector<vector<int>> generate(int numRows); //118
+//    int minimumTotal(vector<vector<int>>& triangle); // 120
+    int minCost(vector<vector<int>>& costs); // 091
+    vector<int> diffWaysToCompute(string expression); // 241
+    int nthSuperUglyNumber(int n, vector<int>& primes); // 313
 };
 
 

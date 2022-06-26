@@ -219,3 +219,40 @@ int FunSolution::smallestRepunitDivByK(int K)
 
 	return -1;
 }
+
+void nextPermutation(vector<int>& nums) {
+    int end = nums.size() - 2;
+    int i = end;
+
+    while (i >= 0 && nums[i] >= nums[i+1]) {
+        --i;
+    }
+
+    if (i >= 0){
+        int j = nums.size() - 1;
+        while (nums[j] <= nums[i]) {
+            --j;
+        }
+        swap(nums[i], nums[j]);
+    }
+
+    reverse(nums.begin() + i + 1, nums.end());
+}
+
+int nthUglyNumber(int n) {
+    vector<int> dp(n + 1, 1);
+
+    int index2 = 1, index3 = 1, index5 = 1;
+    for (int i = 2; i < n+1; ++i) {
+        int num2 = dp[index2] * 2, num3 = dp[index3] * 3, num5 = dp[index5] * 5;
+
+        dp[i] = min(min(num2, num3), num5);
+
+        if (dp[i] == num2) index2++;
+        if (dp[i] == num3) index3++;
+        if (dp[i] == num5) index5++;
+    }
+
+    return dp[n];
+}
+

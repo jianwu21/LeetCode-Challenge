@@ -49,10 +49,10 @@ add_executable(
     HashSolution.cpp
     HashSolution.h
     HeapSolution.cpp
-    HeapSolution.h Graph.cpp Graph.h)
-
-if(Boost_FOUND)
-
-    target_link_libraries(${PROJECT_NAME} ${Boost_LIBRARIES})
-
-endif()
+    HeapSolution.h Graph.cpp Graph.h FooBar.h StackSolutions.cpp StackSolutions.h MinStack.h "RandomPickSolutionWithBLSolution.h")
+#
+#if(Boost_FOUND)
+#
+#    target_link_libraries(${PROJECT_NAME} ${Boost_LIBRARIES})
+#
+#endif()

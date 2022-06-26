@@ -7,7 +7,11 @@
 
 #include "DynamicProgrammingSolution.h"
 
-
+/**
+ *
+ * @param nums
+ * @return
+ */
 int DynamicProgrammingSolution::maxSubArray(vector<int>& nums)
 {
     vector<int> dp;
@@ -668,3 +672,131 @@ int DynamicProgrammingSolution::findMaxForm(vector<string> &strs, int m, int n) 
 	return dp.back().back();
 }
 
+/**
+ *
+ * @param nums
+ * @return
+ */
+int DynamicProgrammingSolution::jump(vector<int>& nums) {
+/** DP
+ * vector<int> dp(nums.size(), 0);
+ *
+ * for (int i = 1; i < nums.size(); ++i) {
+ *     dp[i] = INT32_MAX;
+ *
+ *     for (int j = 0; j < i; ++j) {
+ *         if (i - j <= nums[j]) {
+ *             dp[i] = min(dp[i], dp[j] + 1);
+ *         }
+ *     }
+ * }
+ *
+ * return dp.back();
+ */
+    int ans=0, end = 0, maxPos = 0;
+
+    for (int i = 0; i < nums.size()-1; ++i) {
+        maxPos = max(i + nums[i], maxPos);
+
+        if (end == i) {
+            end = maxPos;
+            ans++;
+        }
+    }
+
+    return ans;
+}
+
+/**
+ *
+ * @param numRows
+ * @return
+ */
+vector<vector<int>> DynamicProgrammingSolution::generate(int numRows) {
+    vector<vector<int>> dp;
+
+    dp.push_back(vector<int> {1});
+
+    for (int i = 1; i < numRows; ++i) {
+        vector<int> cur(i+1, 1);
+
+        for (int j = 1; j < i; ++j) {
+            cur[j] = dp[i-1][j-1] + dp[i-1][j];
+        }
+
+        dp.push_back(cur);
+    }
+
+    return dp;
+}
+
+/**
+ * test
+ * @param costs
+ * @return
+ */
+int DynamicProgrammingSolution::minCost(vector<vector<int>> &costs) {
+    for (size_t i = 1; i < costs.size(); ++i) {
+        costs[i][0] =min(costs[i-1][1]+costs[i][0], costs[i-1][2]+costs[i][0]);
+        costs[i][1] = min(costs[i-1][0]+costs[i][1], costs[i-1][2]+costs[i][1]);
+        costs[i][2] = min(costs[i-1][0]+costs[i][2], costs[i-1][1]+costs[i][2]);
+    }
+
+    return min(min(costs.back()[0], costs.back()[1]), costs.back()[2]);
+}
+
+inline static int doOp(int a, int b, char op) {
+    switch (op) {
+        case '+':
+            return a + b;
+        case '-':
+            return a - b;
+        case '*':
+            return a * b;
+    }
+
+    return -1;
+}
+
+/**
+ *
+ * @param expression
+ * @return
+ */
+vector<int> DynamicProgrammingSolution::diffWaysToCompute(string expression) {
+    return vector<int>(1, 0);
+}
+
+/**
+ *
+ * @param n
+ * @param primes
+ * @return
+ */
+int DynamicProgrammingSolution::nthSuperUglyNumber(int n, vector<int> &primes) {
+    if (n == 1) return 1;
+
+    // use long type here to resolve overflow
+    vector<long> uglyNumbers(n, 1);
+    vector<int> indexes(primes.size(), 0);
+
+    for (int i = 1; i < n; ++i) {
+        int min_num = INT32_MAX, min_index;
+
+        for (int j = 0; j < indexes.size(); ++j) {
+            if (primes[j] * uglyNumbers[indexes[j]] <= uglyNumbers[i-1])
+                indexes[j] += 1;
+
+            if (primes[j] * uglyNumbers[indexes[j]] < min_num)
+            {
+                min_num = primes[j] * uglyNumbers[indexes[j]];
+                min_index = j;
+            }
+        }
+
+        uglyNumbers[i] = primes[min_index] * uglyNumbers[indexes[min_index]];
+        indexes[min_index] += 1;
+    }
+
+    return uglyNumbers.back();
+}

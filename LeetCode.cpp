@@ -9,6 +9,7 @@
 #include "SortAlgorithm.h"
 #include "LinkedListSolution.h"
 #include "HashSolution.h"
+#include "RandomPickSolutionWithBLSolution.h"
 
 void RunDynamicProgrammingQuestions()
 {
@@ -75,7 +76,16 @@ void RunDynamicProgrammingQuestions()
 
     // 474
 	vector<string> strs = {"10", "0001", "111001", "1", "0"};
-	int maxForm = dps.findMaxForm(strs, 5, 3);
+//	int maxForm = dps.findMaxForm(strs, 5, 3);
+
+    // 45
+    vector<int> nums_jump = {2, 3, 1, 1, 4};
+    int jumpStep = dps.jump(nums_jump);
+
+    // 313
+//    vector<int> primes = {2, 7, 13, 19};
+    vector<int> primes = {2, 3, 5, 7};
+    int uglyNumber = dps.nthSuperUglyNumber(5911, primes);
 }
 
 void MathTest()
@@ -87,36 +97,41 @@ void MathTest()
 
 void FunTest()
 {
-    FunSolution fc;
-    vector<vector<char>> map1 = {
-            {'1', '1', '0', '0', '0'},
-            {'1', '1', '0', '0', '0'},
-            {'0', '0', '1', '0', '0'},
-            {'0', '0', '0', '1', '1'}
-    };
+//    FunSolution fc;
+//    vector<vector<char>> map1 = {
+//            {'1', '1', '0', '0', '0'},
+//            {'1', '1', '0', '0', '0'},
+//            {'0', '0', '1', '0', '0'},
+//            {'0', '0', '0', '1', '1'}
+//    };
+//
+//    vector<vector<int >> grid = {
+//            {1, 1, 0, 0, 0},
+//            {1, 1, 0, 0, 0},
+//            {0, 0, 1, 0, 0},
+//            {0, 0, 0, 1, 1}
+//    };
+//
+//    vector<vector<int >> grid2 = {
+//            {0, 1, 0, 0},
+//            {1, 1, 1, 0},
+//            {0, 1, 0, 0},
+//            {1, 1, 0, 0}
+//    };
+//
+//    auto numOfIslands = fc.numIslands(map1);
+//    auto maxArea = fc.maxAreaOfIsland(grid);
+//    auto numOfStripes = fc.islandPerimeter(grid2);
+//
+//    auto s = "Let's take LeetCode contest";
+//	auto ansS = fc.reverseWords(s);
+//
+//	auto rS = fc.reverseStr("abcdefg", 2);
 
-    vector<vector<int >> grid = {
-            {1, 1, 0, 0, 0},
-            {1, 1, 0, 0, 0},
-            {0, 0, 1, 0, 0},
-            {0, 0, 0, 1, 1}
-    };
-
-    vector<vector<int >> grid2 = {
-            {0, 1, 0, 0},
-            {1, 1, 1, 0},
-            {0, 1, 0, 0},
-            {1, 1, 0, 0}
-    };
-
-    auto numOfIslands = fc.numIslands(map1);
-    auto maxArea = fc.maxAreaOfIsland(grid);
-    auto numOfStripes = fc.islandPerimeter(grid2);
-
-    auto s = "Let's take LeetCode contest";
-	auto ansS = fc.reverseWords(s);
-
-	auto rS = fc.reverseStr("abcdefg", 2);
+    vector<int> black_list = {2, 3, 5};
+    RandomPickWithBlackListSolution* obj = new RandomPickWithBlackListSolution(7, black_list);
+    int r1 = obj->Pick();
+    int r2 = obj->Pick();
 }
 
 void SortTest()
@@ -192,12 +207,14 @@ void LinkedListTest()
 	auto m = lls.mergeTwoLists(l1, r1);
 }
 
+//inline void Fun
+
 int main() {
     std::cout << "Test, Begin!" << std::endl;
 
-    RunDynamicProgrammingQuestions();
+//    RunDynamicProgrammingQuestions();
 //    MathTest();
-//    FunTest();
+    FunTest();
 
 //    SortTest();
 
